@@ -1,0 +1,740 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/ForbesLindesay/browserify-middleware#readme"
+
+    >browserify-middleware (v7.1.0)</a>
+</h1>
+<h4>express middleware for browserify v2</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.browserify-middleware">module browserify-middleware</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.browserify-middleware">
+            function <span class="apidocSignatureSpan"></span>browserify-middleware
+            <span class="apidocSignatureSpan">(path, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.directory">
+            function <span class="apidocSignatureSpan">browserify-middleware.</span>directory
+            <span class="apidocSignatureSpan">(path, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.file">
+            function <span class="apidocSignatureSpan">browserify-middleware.</span>file
+            <span class="apidocSignatureSpan">(path, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.modules">
+            function <span class="apidocSignatureSpan">browserify-middleware.</span>modules
+            <span class="apidocSignatureSpan">(modules, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.settings">
+            function <span class="apidocSignatureSpan">browserify-middleware.</span>settings
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.toString">
+            function <span class="apidocSignatureSpan">browserify-middleware.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.browserify-middleware.settings">module browserify-middleware.settings</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>debug</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>detectGlobals</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>gzip</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>ignoreMissing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>insertGlobals</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>minify</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">browserify-middleware.settings.</span>standalone</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.settings.settings">
+            function <span class="apidocSignatureSpan">browserify-middleware.</span>settings
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.settings.development">
+            function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>development
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.settings.env">
+            function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>env
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.settings.normalize">
+            function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>normalize
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.browserify-middleware.settings.production">
+            function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>production
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browserify-middleware.settings.</span>extensions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browserify-middleware.settings.</span>external</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browserify-middleware.settings.</span>grep</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browserify-middleware.settings.</span>ignore</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browserify-middleware.settings.</span>noParse</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browserify-middleware.settings.</span>transform</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">browserify-middleware.settings.</span>mode</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browserify-middleware" id="apidoc.module.browserify-middleware">module browserify-middleware</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.browserify-middleware" id="apidoc.element.browserify-middleware.browserify-middleware">
+        function <span class="apidocSignatureSpan"></span>browserify-middleware
+        <span class="apidocSignatureSpan">(path, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function browserify(path, options) {
+  if (Array.isArray(path)) {
+    return exports.modules(path, options);
+  }
+  path = resolve(path);
+  options = exports.settings.normalize(options);
+  options.noParse = options.noParse.map(function (path) {
+    if (path[0] != &#x27;.&#x27;) return path; //support `[&#x27;jquery&#x27;]` as well as `[&#x27;./src/jquery.js&#x27;]`
+    return resolve(path);
+  });
+  if (stat(path).isDirectory()) {
+    return exports.directory(path, options);
+  } else {
+    return exports.file(path, options);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.directory" id="apidoc.element.browserify-middleware.directory">
+        function <span class="apidocSignatureSpan">browserify-middleware.</span>directory
+        <span class="apidocSignatureSpan">(path, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function directory(path, options) {
+  options = normalize(options);
+  var cache = {};
+  return function (req, res, next) {
+    var p = join(path, req.path);
+    if (cache[p]) return cache[p].send(req, res, next);
+    if (options.grep.test(req.path)) {
+      fs.stat(p, function (err, stat) {
+        if (err || !stat.isFile()) return next();
+        cache[p] = buildResponse(p, options);
+        cache[p].send(req, res, next);
+      });
+    } else {
+      return next();
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  path = resolve(path);
+  options = exports.settings.normalize(options);
+  options.noParse = options.noParse.map(function (path) {
+    if (path[0] != &#x27;.&#x27;) return path; //support `[&#x27;jquery&#x27;]` as well as `[&#x27;./src/jquery.js&#x27;]`
+    return resolve(path);
+  });
+  if (stat(path).isDirectory()) {
+    return exports.<span class="apidocCodeKeywordSpan">directory</span>(path, options);
+  } else {
+    return exports.file(path, options);
+  }
+}
+exports.directory = require(&#x27;./lib/directory&#x27;);
+exports.file = require(&#x27;./lib/file&#x27;);
+exports.modules = require(&#x27;./lib/modules&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.file" id="apidoc.element.browserify-middleware.file">
+        function <span class="apidocSignatureSpan">browserify-middleware.</span>file
+        <span class="apidocSignatureSpan">(path, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function directory(path, options) {
+  options = normalize(options);
+  var response = buildResponse(path, options);
+  return function (req, res, next) {
+    response.send(req, res, next);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  options.noParse = options.noParse.map(function (path) {
+    if (path[0] != &#x27;.&#x27;) return path; //support `[&#x27;jquery&#x27;]` as well as `[&#x27;./src/jquery.js&#x27;]`
+    return resolve(path);
+  });
+  if (stat(path).isDirectory()) {
+    return exports.directory(path, options);
+  } else {
+    return exports.<span class="apidocCodeKeywordSpan">file</span>(path, options);
+  }
+}
+exports.directory = require(&#x27;./lib/directory&#x27;);
+exports.file = require(&#x27;./lib/file&#x27;);
+exports.modules = require(&#x27;./lib/modules&#x27;);
+
+exports.settings = require(&#x27;./lib/settings&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.modules" id="apidoc.element.browserify-middleware.modules">
+        function <span class="apidocSignatureSpan">browserify-middleware.</span>modules
+        <span class="apidocSignatureSpan">(modules, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function modules(modules, options) {
+  options = normalize(options);
+  if (options.external) {
+    options.external = options.external
+      .filter(function (name) {
+        return modules.indexOf(name) === -1;
+      });
+  }
+  var response = buildResponse(modules, options);
+  return function (req, res, next) {
+    response.send(req, res, next);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var resolve = path.resolve;
+var dirname = path.dirname;
+var stat = require(&#x27;fs&#x27;).statSync;
+
+exports = module.exports = browserify;
+function browserify(path, options) {
+if (Array.isArray(path)) {
+  return exports.<span class="apidocCodeKeywordSpan">modules</span>(path, options);
+}
+path = resolve(path);
+options = exports.settings.normalize(options);
+options.noParse = options.noParse.map(function (path) {
+  if (path[0] != &#x27;.&#x27;) return path; //support `[&#x27;jquery&#x27;]` as well as `[&#x27;./src/jquery.js&#x27;]`
+  return resolve(path);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.settings" id="apidoc.element.browserify-middleware.settings">
+        function <span class="apidocSignatureSpan">browserify-middleware.</span>settings
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(key) {
+  if (arguments.length === 2) {
+    obj[key] = arguments[1];
+    return this;
+  } else if (typeof key === &#x27;object&#x27;) {
+    Object.keys(key)
+      .forEach(function (k) {
+        obj[k] = key[k];
+      });
+    return this;
+  } else {
+    return obj[key];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+standalone = false;
+grep = /\.js$/
+```
+
+To update:
+
+```javascript
+browserify.<span class="apidocCodeKeywordSpan">settings</span>(&#x27;external&#x27;, [&#x27;hyperquest&#x27;]);
+//or
+browserify.settings({
+  ignoreMissing: true,
+  insertGlobals: true,
+  transform: [&#x27;rfileify&#x27;]
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.toString" id="apidoc.element.browserify-middleware.toString">
+        function <span class="apidocSignatureSpan">browserify-middleware.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browserify-middleware.settings" id="apidoc.module.browserify-middleware.settings">module browserify-middleware.settings</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.settings.settings" id="apidoc.element.browserify-middleware.settings.settings">
+        function <span class="apidocSignatureSpan">browserify-middleware.</span>settings
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(key) {
+  if (arguments.length === 2) {
+    obj[key] = arguments[1];
+    return this;
+  } else if (typeof key === &#x27;object&#x27;) {
+    Object.keys(key)
+      .forEach(function (k) {
+        obj[k] = key[k];
+      });
+    return this;
+  } else {
+    return obj[key];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+standalone = false;
+grep = /\.js$/
+```
+
+To update:
+
+```javascript
+browserify.<span class="apidocCodeKeywordSpan">settings</span>(&#x27;external&#x27;, [&#x27;hyperquest&#x27;]);
+//or
+browserify.settings({
+  ignoreMissing: true,
+  insertGlobals: true,
+  transform: [&#x27;rfileify&#x27;]
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.settings.development" id="apidoc.element.browserify-middleware.settings.development">
+        function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>development
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(key) {
+  if (arguments.length === 2) {
+    obj[key] = arguments[1];
+    return this;
+  } else if (typeof key === &#x27;object&#x27;) {
+    Object.keys(key)
+      .forEach(function (k) {
+        obj[k] = key[k];
+      });
+    return this;
+  } else {
+    return obj[key];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+development.gzip = false;
+development.debug = true;
+```
+
+To update:
+
+```javascript
+browserify.settings.<span class="apidocCodeKeywordSpan">development</span>(&#x27;gzip&#x27;, true);
+```
+
+The following defaults are the same for production and development:
+
+```javascript
+external = [];
+ignore = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.settings.env" id="apidoc.element.browserify-middleware.settings.env">
+        function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>env
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function env(name) {
+  if (exports[name]) {
+    return exports[name];
+  }
+  reservedKeys.push(name);
+  return exports[name] = setter();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+Custom Environments:
+
+You can also create a new custom environment:
+
+```javascript
+var test = browserify.settings.<span class="apidocCodeKeywordSpan">env</span>(&#x27;test&#x27;);
+test(&#x27;minify&#x27;, true);
+//or
+test({
+  debug: true
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.settings.normalize" id="apidoc.element.browserify-middleware.settings.normalize">
+        function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>normalize
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalize(options) {
+  var defaults = exports[exports.mode] || {};
+  options = options || {};
+
+  Object.keys(defaults)
+    .forEach(function (key) {
+      if (options[key] === null || options[key] === undefined) {
+        options[key] = defaults[key];
+      }
+    });
+  Object.keys(exports)
+    .forEach(function (key) {
+      if (reservedKeys.indexOf(key) === -1 &#x26;&#x26; (options[key] === null || options[key] === undefined)) {
+        options[key] = exports[key];
+      }
+    });
+
+
+  if (options.cache === &#x27;dynamic&#x27;) {
+    // leave unchanged
+  } else if (typeof options.cache === &#x27;string&#x27; &#x26;&#x26; ms(options.cache)) {
+    options.cache = &#x27;public, max-age=&#x27; + Math.floor(ms(options.cache)/1000);
+  } else if (options.cache === true) {
+    options.cache = &#x27;public, max-age=60&#x27;;
+  } else if (typeof options.cache === &#x27;number&#x27;) {
+    options.cache = &#x27;public, max-age=&#x27; + Math.floor(options.cache/1000);
+  } else if (typeof options.cache === &#x27;object&#x27;) {
+    options.cache = (options.cache.private ? &#x27;private&#x27; : &#x27;public&#x27;) + &#x27;, max-age=&#x27;
+                  + Math.floor(ms(options.cache.maxAge.toString())/1000);
+  }
+
+  options.precompile = !!options.precompile;
+  options.external = arrayify(options.external);
+  options.ignore = arrayify(options.ignore);
+  options.transform = arrayify(options.transform);
+  options.noParse = arrayify(options.noParse);
+  options.extensions = arrayify(options.extensions);
+
+  return options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports = module.exports = browserify;
+function browserify(path, options) {
+if (Array.isArray(path)) {
+  return exports.modules(path, options);
+}
+path = resolve(path);
+options = exports.settings.<span class="apidocCodeKeywordSpan">normalize</span>(options);
+options.noParse = options.noParse.map(function (path) {
+  if (path[0] != &#x27;.&#x27;) return path; //support `[&#x27;jquery&#x27;]` as well as `[&#x27;./src/jquery.js&#x27;]`
+  return resolve(path);
+});
+if (stat(path).isDirectory()) {
+  return exports.directory(path, options);
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.browserify-middleware.settings.production" id="apidoc.element.browserify-middleware.settings.production">
+        function <span class="apidocSignatureSpan">browserify-middleware.settings.</span>production
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(key) {
+  if (arguments.length === 2) {
+    obj[key] = arguments[1];
+    return this;
+  } else if (typeof key === &#x27;object&#x27;) {
+    Object.keys(key)
+      .forEach(function (k) {
+        obj[k] = key[k];
+      });
+    return this;
+  } else {
+    return obj[key];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+production.gzip = true;
+production.debug = false;
+```
+
+To update:
+
+```javascript
+browserify.settings.<span class="apidocCodeKeywordSpan">production</span>(&#x27;cache&#x27;, &#x27;7 days&#x27;);
+```
+
+Development defaults:
+
+```javascript
+development.cache = &#x27;dynamic&#x27;;
+development.precompile = false;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
